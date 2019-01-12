@@ -1,12 +1,15 @@
 def fizzbuzz(x):
-    if x % 5 == 0 and x % 3 == 0:
+    fizz = (x % 3 == 0)
+    buzz = (x % 5 == 0)
+
+    if fizz and buzz:
         return "FizzBuzz"
-    elif x % 5 == 0:
+    elif buzz:
         return "Buzz"
-    elif x % 3 == 0:
+    elif fizz:
         return "Fizz"
     else:
         return x
 
-for num in range(1, 100):
+for num in range(1, 101):
     print(fizzbuzz(num))
